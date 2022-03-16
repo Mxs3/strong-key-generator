@@ -1,6 +1,5 @@
 import random
 import array
-import sys
 
 
 class Colors:
@@ -89,16 +88,11 @@ def generate_password_symbols():
     for _value in temp_password_list:
         generated_password = generated_password + _value
 
-    print(Colors.BLUE + "GENERATED PASSWORD: " +
+    print(Colors.BLUE + "GENERATED PASSWORD (SYMBOLS): " +
           Colors.GREEN + generated_password)
 
 
 if __name__ == "__main__":
-
     init()
-
-    if sys.argv[1] == args[0] or sys.argv[1] == args[1]:
-        generate_password_symbols()
-
-    elif sys.argv[1] == args[2] or sys.argv[1] == args[3]:
-        generate_password_no_symbols()
+    generate_password_no_symbols()
+    generate_password_symbols()
